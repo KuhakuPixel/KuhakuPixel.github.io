@@ -2,13 +2,55 @@ var learnmore = document.getElementById("btn-learnmore")
 var email = document.getElementById("email").value
 var submit = document.getElementById("btn-submit")
 var emailSubmitForm = document.getElementById("email-form");
+var onEmailSubmitModal = document.getElementById("myModal");
+var modalDocument = document.getElementById("myModal");
+var myModal = new bootstrap.Modal(modalDocument, {});
 learnmore.addEventListener("click", () => {
   alert("Learn more isn't paired yet!")
 })
-
-submit.addEventListener("click", () => {
-  //alert("Your email has been registered.")
-})
 emailSubmitForm.addEventListener("submit", () => {
-  alert("Your  has been registered.");
+  alert("Test");
+  var modalDocument = document.getElementById("myModal");
+  var myModal = new bootstrap.Modal(modalDocument, {});
+  //alert("Test");
+  myModal.show();
+})
+//catch the submit event of the email form to prevent reloading
+//https://stackoverflow.com/questions/23507608/form-submission-without-page-refresh
+$(document).ready(function () {
+  $('#email-form').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: $(this).attr('action') || window.location.pathname,
+      type: "GET",
+      data: $(this).serialize(),
+      success: function (data) {
+        // $("#form_output").html(data);
+      },
+      error: function (jXHR, textStatus, errorThrown) {
+        alert(errorThrown);
+      }
+    });
+  });
 });
+
+/*
+// handle form submission before submmiting
+// to prevent reloading on submit 
+//https://stackoverflow.com/questions/1263852/prevent-form-redirect-or-refresh-on-submit
+emailSubmitForm.submit(function () {
+  var modalDocument = document.getElementById("myModal");
+  var myModal = new bootstrap.Modal(modalDocument, {});
+  //alert("Test");
+  myModal.show();
+  return false;
+});
+*/
+document.createElement("form").submit.call()
+function EmailFormBeforeSubmit() {
+  var modalDocument = document.getElementById("myModal");
+  var myModal = new bootstrap.Modal(modalDocument, {});
+  //alert("Test");
+  myModal.show();
+
+}
