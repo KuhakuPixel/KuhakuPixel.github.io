@@ -25,7 +25,7 @@ $("#workshop-register-form").submit(function (e) {
 for (var i = 0; i < registerNowButtons.length; i++) {
   registerNowButtons[i].addEventListener("click", () => {
     alert("opening modal");
-    $('#registerModal').modal('show');
+    $('#exampleModal').modal('show');
   });
 
 }
