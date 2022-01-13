@@ -9,7 +9,7 @@ learnmore.addEventListener("click", () => {
   alert("Learn more isn't paired yet!")
 })
 emailSubmitForm.addEventListener("submit", () => {
-  alert("Test");
+  //alert("Test");
   var modalDocument = document.getElementById("myModal");
   var myModal = new bootstrap.Modal(modalDocument, {});
   //alert("Test");
