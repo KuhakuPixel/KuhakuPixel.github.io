@@ -2,14 +2,13 @@ var learnmore = document.getElementById("btn-learnmore")
 var email = document.getElementById("email").value
 var submit = document.getElementById("btn-submit")
 var emailSubmitForm = document.getElementById("email-form");
-var onEmailSubmitModal = document.getElementById("emailSubmitModal");
+
+var modalDocument = document.getElementById("emailSubmitModal");
+var emailSubmitModal = new bootstrap.Modal(modalDocument, {});
 learnmore.addEventListener("click", () => {
   alert("Learn more isn't paired yet!")
 })
 emailSubmitForm.addEventListener("submit", () => {
-  //alert("Test");
-  var modalDocument = document.getElementById("emailSubmitModal");
-  var emailSubmitModal = new bootstrap.Modal(modalDocument, {});
   //alert("Test");
   emailSubmitModal.show();
 })
