@@ -258,7 +258,14 @@ p.mid-white {
 .bottom-footer{
   height: 40px;
 }
-
+.register-form
+{ 
+  display: table;     
+ 
+}
+/*input { display: table-cell; }*/
+/*p     { display: table-row;  }*/
+/*label { display: table-cell; }*/
 
 /* .navbar-css{
     display: flex;
