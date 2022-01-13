@@ -8,16 +8,24 @@ var emailSubmitModal = new bootstrap.Modal(modalDocument, {});
 var registerWorkshopModal = new bootstrap.Modal(document.getElementById("registrationModal"), {});
 
 
-var registerNowButtons =document.getElementsByClassName("register-now-btn");
+var registerNowButtons = document.getElementsByClassName("register-now-btn");
 
+
+for (var i = 0; i < registerNowButtons.length; i++) {
+
+  registerNowButtons[i].addEventListener("click", () => {
+    registerWorkshopModal.show();
+  });
+}
 learnmore.addEventListener("click", () => {
   alert("Learn more isn't paired yet!")
 })
 emailSubmitForm.addEventListener("submit", () => {
   //alert("Test");
-  //emailSubmitModal.show();
-  registerWorkshopModal.show();
+  emailSubmitModal.show();
+  //registerWorkshopModal.show();
 })
+
 //catch the submit event of the email form to prevent reloading
 //https://stackoverflow.com/questions/23507608/form-submission-without-page-refresh
 $(document).ready(function () {
