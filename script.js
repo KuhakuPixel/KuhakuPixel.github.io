@@ -6,6 +6,10 @@ var emailSubmitForm = document.getElementById("email-form");
 var modalDocument = document.getElementById("emailSubmitModal");
 var emailSubmitModal = new bootstrap.Modal(modalDocument, {});
 var registerWorkshopModal = new bootstrap.Modal(document.getElementById("registrationModal"), {});
+
+
+var registerNowButtons =document.getElementsByClassName("register-now-btn");
+
 learnmore.addEventListener("click", () => {
   alert("Learn more isn't paired yet!")
 })
